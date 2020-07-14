@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+    margin: 30px;
+}
+code {font-weight: 900;
+color: red;}
+
+.randobox {
+    background-color: #efefef;
+    padding: 20px;
+    font-size: 1.5em;
+}
+h6 {
+    margin: 10px 0;
+}
+#content1 {
+    color: red;
+}
+#content2 {
+    color: blue;
+}
+#content3 {
+    color: purple;
+}
+#content4 {
+    color: orange;
+}
+
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+
+<title>Test</title>
+
+<link rel="stylesheet" href="css/style3.css">
+
+<script type="text/javascript">
+  var imageURLs = [
+       "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+     , "https://images.unsplash.com/photo-1536720298877-693b87f05655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+     , "https://images.unsplash.com/photo-1563132305-24784f57eeea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+  ];
+  function getImageTag() {
+    var img = '<img src=\"';
+    var randomIndex = Math.floor(Math.random() * imageURLs.length);
+    img += imageURLs[randomIndex];
+    img += '\" alt=\"Some alt text\"/>';
+
+return img;
+}
+</script>
+<script type="text/javascript">
+  document.write(getImageTag());
+</script>
+<script type="text/javascript">
+      
+      randomNumber = Math.floor(Math.random()*3+1);  // Our Variable
+
+window.onload = function() {  // Our Function - calling the Variable with "if"
+    if (randomNumber == 1) {
+        document.getElementById("content1").style.display = "inline";
+        document.getElementById("content2").style.display = "none";
+        document.getElementById("content3").style.display = "none";
+       
+    }
+    if (randomNumber == 2) {
+        document.getElementById("content1").style.display = "none";
+        document.getElementById("content2").style.display = "inline";
+        document.getElementById("content3").style.display = "none";
+       
+    }
+    if (randomNumber == 3) {
+        document.getElementById("content1").style.display = "none";
+        document.getElementById("content2").style.display = "none";
+        document.getElementById("content3").style.display = "inline";
+           }
+    
+}
+
+  </script>
+ 
+</head>
+
+<body>
+
+<!--<h2 style="text-align:center"></h2>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+<p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p> -->
+<div class="randobox">
+<h2 style="text-align:center"> Larissa Belluci </h2>
+<div id="content1">A dreamy girl with a big heart and a sweet spot for pets, looking for a real man to start a journey with her called life.</div>
+<div id="content2">A beautiful and athletic lady, big fan of Tennis and hiking looking for a sweet man to start a journey with her called life.</div>
+<div id="content3">They don't make them like this anymore, this woman is every man's dream....just waiting for you.</div>
+<!--<div id="content4">This is the 4th content.</div> -->
+</div>
+
+
+</body>
+</html>
